@@ -1,5 +1,6 @@
 common_pkg:
   pkg.installed:
-    - vim
-    - htop
-    - gcc
+    - name: vim
+    - name: htop
+    - name: gcc
+    - name: wget
