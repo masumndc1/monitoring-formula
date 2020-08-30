@@ -1,4 +1,0 @@
-devel:
-  '*devel*':
-  - devel
-
