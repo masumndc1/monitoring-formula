@@ -1,8 +1,5 @@
-state_pull:
+git@github.com:masumndc1/salt-states.git:
   git.latest:
-    - name: git@github.com/masumndc1/salt-states.git
     - target: /srv/salt 
-    - identity: /root/.ssh/id_rsa
-    - require:
-        - pkg: git
-	- ssh_known_hosts: github.com
+    - identity: /home/masum/.ssh/id_rsa
+    - force_clone: true
