@@ -7,4 +7,5 @@ base:
 
 devel:
   '*devel*':
+  - nagios
   
