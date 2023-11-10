@@ -1,7 +1,2 @@
-base:
-  '*':
-  - default
-
-devel:
-  '*devel*':
-  - nagios
+include:
+  - .default

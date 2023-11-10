@@ -1,3 +1,2 @@
 include:
-  - default
-  - nagios
+  - default.pkg
