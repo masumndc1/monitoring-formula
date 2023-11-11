@@ -1,2 +1,4 @@
 include:
-  - default.pkg
+  - .default
+  - .git_fetch
+  - .nagios
