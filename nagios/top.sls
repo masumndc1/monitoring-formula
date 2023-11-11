@@ -1,4 +1,0 @@
-include:
- - .service
- - .files
- - .pkgs
