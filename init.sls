@@ -1,4 +1,4 @@
 include:
-  - .default
+  - .nrpe_agent
   - .git_fetch
   - .nagios
