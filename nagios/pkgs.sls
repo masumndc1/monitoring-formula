@@ -3,8 +3,8 @@ install_required_packages:
     - name: httpd
     - name: nrpe
     - name: nagios
-{% if grains[os_family] == 'Redhat' %}
+{% if grains['os_family'] == 'Redhat' %}
     - name: nagios-plugins-all
-{% elif grains[os_family] == 'Suse' %}
+{% elif grains['os_family'] == 'Suse' %}
     - name: monitoring-plugins-nrpe
 {% endif %}
