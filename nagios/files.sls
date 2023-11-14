@@ -7,25 +7,25 @@ backup:
   - source: {{ src }}
 {% endif %}
 
-/etc/nagios/conf.d/debian95.cfg:
+/etc/nagios/conf.d/sys-dev1.cfg:
  file.managed:
-  - source: salt://monitoring/nagios/debian95.cfg
+  - source: salt://monitoring/nagios/sys-dev1.cfg
 
-/etc/nagios/conf.d/dragonfly.cfg:
+/etc/nagios/conf.d/sys-dev2.cfg:
  file.managed:
-  - source: salt://monitoring/nagios/dragonfly.cfg
+  - source: salt://monitoring/nagios/sys-dev2.cfg
   
-/etc/nagios/conf.d/freebsd.cfg:
+/etc/nagios/conf.d/sys-prod1.cfg:
  file.managed:
-  - source: salt://monitoring/nagios/freebsdsalt.cfg
+  - source: salt://monitoring/nagios/sys-prod1.cfg
 
-/etc/nagios/conf.d/splunk.cfg:
+/etc/nagios/conf.d/sys-prod2.cfg:
  file.managed:
-  - source: salt://monitoring/nagios/splunk.cfg
+  - source: salt://monitoring/nagios/sys-prod2.cfg
 
-/etc/nagios/conf.d/minion.cfg:
+/etc/nagios/conf.d/monitoring.cfg:
  file.managed:
-  - source: salt://monitoring/nagios/minion.cfg
+  - source: salt://monitoring/nagios/monitoring.cfg
 
 /etc/nagios/nrpe.cfg:
  file.managed:
