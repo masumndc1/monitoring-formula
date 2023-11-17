@@ -1,6 +1,6 @@
 {% set service = 'linux-server' %}
 {% set host_name = 'sys-dev1' %}
-{% include "monitoring/vars.jinja" with context %}
+{% from "monitoring/vars.jinja" import sys_dev1 with context %}
 define host {
   use                      {{ service }}
   host_name                {{ host_name }}
