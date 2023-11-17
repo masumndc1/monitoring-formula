@@ -5,7 +5,7 @@ define host {
   use                      {{ service }}
   host_name                {{ host_name }}
   alias                    client
-  address                  {{ sys-dev1 }}
+  address                  {{ sys_dev1 }}
   max_check_attempts       5
   check_period             24x7
   notification_interval    30
