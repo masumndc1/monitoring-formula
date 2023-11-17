@@ -1,11 +1,11 @@
 {% set service = 'linux-server' %}
 {% set host_name = 'sys-dev1' %}
-{% from "monitoring/vars.jinja" import 'sys-dev1' as address with context %}
+{% include "monitoring/vars.jinja" with context %}
 define host {
   use                      {{ service }}
   host_name                {{ host_name }}
   alias                    client
-  address                  {{ address }}
+  address                  {{ sys-dev1 }}
   max_check_attempts       5
   check_period             24x7
   notification_interval    30
