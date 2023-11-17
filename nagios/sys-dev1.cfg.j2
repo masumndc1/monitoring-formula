@@ -4,7 +4,7 @@ define host {
   use                      {{ service }}
   host_name                {{ host_name }}
   alias                    client
-{% if 'sys-dev1' in vars %}
+{% if 'sys-dev1' in monitoring.vars %}
   address                  {{ sys-dev1 }}
 {% endif %}
   max_check_attempts       5
