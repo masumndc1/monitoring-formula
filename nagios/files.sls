@@ -20,6 +20,7 @@ backup:
 /etc/nagios/conf.d/sys-dev1.cfg:
   file.managed:
     - source: salt://monitoring/nagios/sys-dev1.cfg.jinja
+    - template: jinja
 
 /etc/nagios/conf.d/sys-dev2.cfg:
   file.managed:
