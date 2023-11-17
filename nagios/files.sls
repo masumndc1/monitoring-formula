@@ -9,7 +9,7 @@ backup:
 
 /etc/nagios/conf.d/sys-dev1.cfg:
  file.managed:
-  - source: salt://monitoring/nagios/sys-dev1.cfg
+  - source: salt://monitoring/nagios/sys-dev1.cfg.j2
 
 /etc/nagios/conf.d/sys-dev2.cfg:
  file.managed:
