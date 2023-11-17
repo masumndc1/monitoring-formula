@@ -1,12 +1,13 @@
 install_required_packages:
   pkg.installed:
     - template: jinja
+    - pkgs:
 {% if grains['os_family'] == 'Redhat' %}
-    - name: httpd
-    - name: nagios-plugins-all
+      - httpd
+      - nagios-plugins-all
 {% elif grains['os_family'] == 'Suse' %}
-    - name: apache2
-    - name: monitoring-plugins-nrpe
+      - apache2
+      - monitoring-plugins-nrpe
 {% endif %}
-    - name: nrpe
-    - name: nagios
+      -  nrpe
+      -  nagios
