@@ -1,11 +1,14 @@
 {% set src = '/etc/nagios/objects/localhost.cfg' %}
 {% set dst = '/etc/nagios/objects/localhost.cfg.bk' %}
-{% if not salt['file.file_exists'](dst) %}
+{% if salt['file.file_exists'](src) %}
+  {% if not salt['file.file_exists'](dst) %}
 backup:
   file.copy:
     - name: {{ dst }}
     - source: {{ src }}
+  {% endif %}
 {% endif %}
+
 
 /etc/nagios/conf.d:
   file.directory:
