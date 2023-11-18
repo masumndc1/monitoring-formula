@@ -17,3 +17,6 @@ nrpe:
     - enable: true
     - watch:
       - file: /etc/nagios/*
+firewalld:
+  service.running:
+    - enable: true
