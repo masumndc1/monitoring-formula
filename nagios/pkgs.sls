@@ -11,5 +11,6 @@ install_required_packages:
       - monitoring-plugins-nagios
       - monitoring-plugins-nrpe
 {% endif %}
-      -  nrpe
-      -  nagios
+      - firewalld
+      - nrpe
+      - nagios
