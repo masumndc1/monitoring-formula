@@ -1,17 +1,19 @@
-service.running:
-  - name: nagios
-    - enable: true
-    - watch:
-      - file: /etc/nagios/*
-  - name: nrpe
+nagios:
+  service.running:
     - enable: true
     - watch:
       - file: /etc/nagios/*
 {% if grains['os_family'] == 'Redhat' %}
-  - name: httpd
+httpd:
 {% else %}
-  - name: apache2
+apache2:
 {% endif%}
+  service.running:
+    - enable: true
+    - watch:
+      - file: /etc/nagios/*
+nrpe:
+  service.running:
     - enable: true
     - watch:
       - file: /etc/nagios/*
