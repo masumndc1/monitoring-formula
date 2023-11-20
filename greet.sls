@@ -1,3 +1,3 @@
 greet:
   cmd.run:
-    - echo "greetings from monitoring formula"
+    - name: echo "greetings from monitoring formula"
