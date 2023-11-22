@@ -1,5 +1,6 @@
 include:
-  - .files
   - .pkgs
-  - .service
   - .firewall
+  - .files
+  - .htpasswd
+  - .service
