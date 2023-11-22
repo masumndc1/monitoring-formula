@@ -65,7 +65,8 @@ server_port=5666
 # NOTE: This option is ignored if NRPE is running under either inetd or xinetd
 #       or with systemd. Please start by hand.
 
-server_address=127.0.0.1 {{ monitoring }}
+server_address=127.0.0.1
+server_address={{ monitoring }}
 
 
 
