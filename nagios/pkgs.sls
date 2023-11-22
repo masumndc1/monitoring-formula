@@ -3,6 +3,7 @@ install_required_packages:
     - template: jinja
     - pkgs:
 {% if grains['os_family'] == 'Redhat' %}
+      - epel-release
       - httpd
       - nagios-plugins-all
       - nagios-plugins-nrpe
