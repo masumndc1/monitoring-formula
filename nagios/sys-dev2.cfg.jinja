@@ -23,22 +23,8 @@ define service {
 define service {
   use                      {{ service }}
   host_name                {{ host_name }}
-  service_description      Root Partition
-  check_command            check_local_disk!20%!10%
-}
-
-define service {
-  use                      {{ service }}
-  host_name                {{ host_name }}
   service_description      Current Users
   check_command            check_local_users!20!50
-}
-
-define service {
-  use                      {{ service }}
-  host_name                {{ host_name }}
-  service_description      Total Processes
-  check_command            check_local_procs!250!400
 }
 
 define service {
@@ -51,23 +37,7 @@ define service {
 define service {
   use                      {{ service }}
   host_name                {{ host_name }}
-  service_description      Swap Usage
-  check_command            check_local_swap!20!10
-}
-
-define service {
-  use                      {{ service }}
-  host_name                {{ host_name }}
   service_description      SSH
   check_command            check_ssh
   notifications_enabled    0
 }
-
-define service {
-  use                      {{ service }}
-  host_name                {{ host_name }}
-  service_description      HTTP
-  check_command            check_http
-  notifications_enabled    0
-}
-
