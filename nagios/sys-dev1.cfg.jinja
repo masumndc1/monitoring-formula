@@ -41,11 +41,3 @@ define service {
   check_command            check_ssh
   notifications_enabled    0
 }
-
-define service {
-  use                      {{ service }}
-  host_name                {{ host_name }}
-  service_description      HTTP
-  check_command            check_http
-  notifications_enabled    0
-}
