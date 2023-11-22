@@ -1,8 +1,9 @@
-{% set service = 'linux-server' %}
+{% set service = 'generic-service' %}
+{% set host_type = 'linux-server' %}
 {% set host_name = 'sys-dev2' %}
 {% from "monitoring/vars.jinja" import sys_dev2 with context %}
 define host {
-  use                      {{ service }}
+  use                      {{ host_type }}
   host_name                {{ host_name }}
   alias                    client
   address                  {{ sys_dev2 }}
