@@ -5,6 +5,7 @@ install_required_packages:
 {% if grains['os_family'] == 'Redhat' %}
       - httpd
       - nagios-plugins-all
+      - nagios-plugins-nrpe
 {% elif grains['os_family'] == 'Suse' %}
       - apache2
       - apache2-utils
