@@ -4,7 +4,8 @@
 
 /etc/nagios/nrpe.cfg:
   file.managed:
-    - source: salt://monitoring/nagios/nrpe.cfg
+    - source: salt://monitoring/nagios/nrpe.cfg.jinja
+    - template: jinja
 
 /etc/nagios/servers:
   file.directory:
