@@ -64,13 +64,16 @@ simple password for nagiosadmin user. This should be strong as possible.
 ```
 
 4. Finally run following command in saltmaster node.
-
-5. Browse following for the dashboard
-nagios: http:monitoring_IP/nagios
-grafana: http:monitoring_IP:3000
 ```
 [root@saltmaster ~]# salt \* state.apply
 ```
+
+5. Browse following for the dashboard
+```
+nagios: http:monitoring_IP/nagios
+grafana: http:monitoring_IP:3000
+```
+
 ## Images:
 ![nagios](/images/nagios.png)
 ![grafana_dashboard](/images/grafana_dashboard.png)
