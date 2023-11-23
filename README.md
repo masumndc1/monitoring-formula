@@ -70,6 +70,7 @@ simple password for nagiosadmin user. This should be strong as possible.
 ```
 ## Images:
 ![nagios](/images/nagios.png)
+![grafana_dashboard](/images/grafana_dashboard.png)
 
 
 ## Troubleshooting:
