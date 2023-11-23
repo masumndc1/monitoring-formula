@@ -4,5 +4,6 @@ gpg_key:
     - name: rpm --import /tmp/gpg.key
 
 pkg.installed:
-  - pkg: grafana
-    - require: gpg_key
+  - pkg:
+    - grafana
+  - require: gpg_key
