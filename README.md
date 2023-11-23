@@ -1,5 +1,74 @@
 # salt-states
 
+## Usages:
+1. You can fork this repo to your github account.
+Add this formula in master config file. example can be:
+
+```
+[root@saltmaster master.d]# pwd
+/etc/salt/master.d
+[root@saltmaster master.d]# ls
+file_gitfs.conf  pillar.conf
+[root@saltmaster master.d]# cat file_gitfs.conf
+fileserver_backend:
+  - roots
+  - gitfs
+
+file_roots:
+  base:
+    - /srv/salt
+  devel:
+    - /srv/salt
+
+gitfs_remotes:
+  - https://github.com/masumndc1/monitoring-formula.git:
+    - mountpoint: salt://monitoring
+
+gitfs_provider: gitpython
+
+```
+2. Add this formula to top.sls file in saltmaster node.
+```
+[root@saltmaster master.d]# cat /srv/salt/top.sls
+# example top file
+# this should be in /srv/salt folder
+# /srv/salt should have 0755
+base:
+  '*':
+    - monitoring.greet
+
+  'monitoring*':
+    - monitoring
+
+  'sys-*':
+    - monitoring.nrpe_agent
+[root@saltmaster master.d]#
+
+```
+3. Change vars.jinja file accordingly, if you dont have set pillar.
+
+```
+❯ pwd
+/Documents/github/monitoring-formula
+❯ cat vars.jinja
+{% set monitoring = "10.91.203.114" %}
+{% set sys_dev1 = "10.91.203.23" %}
+{% set sys_dev2 = "10.91.203.184" %}
+{% set sys_prod1 = "10.91.203.177" %}
+{% set sys_prod2 = "10.91.203.217" %}
+{% set nagiosadmin = "nagiosadmin" %}
+❯
+
+
+```
+
+4. Finally run following command in saltmaster node.
+
+```
+
+[root@saltmaster ~]# salt \* state.apply
+
+```
 ## Images:
 ![nagios](/images/nagios.png)
 
