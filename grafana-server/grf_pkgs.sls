@@ -6,4 +6,4 @@ gpg_key:
 pkg.installed:
   - pkg:
     - grafana
-  - require: gpg_key
+    - require: gpg_key
