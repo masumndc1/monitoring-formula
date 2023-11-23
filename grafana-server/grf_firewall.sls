@@ -1,4 +1,4 @@
-public:
+grafana_port:
   firewalld.present:
     - name: public
     - default: False
