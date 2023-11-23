@@ -1,4 +1,4 @@
-# salt-states
+# salt formula to setup nagios and grafana in a cluster
 
 ## Usages:
 1. You can fork this repo to your github account.
