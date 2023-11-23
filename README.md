@@ -46,6 +46,9 @@ base:
 
 ```
 3. Change vars.jinja file accordingly, if you dont have set pillar.
+Here monitoring is nagios server node, all of the other sys_* nodes
+are monitoring agents which will be montored. I have set a really
+simple password for nagiosadmin user. This should be strong as possible.
 
 ```
 ❯ pwd
@@ -58,16 +61,12 @@ base:
 {% set sys_prod2 = "10.91.203.217" %}
 {% set nagiosadmin = "nagiosadmin" %}
 ❯
-
-
 ```
 
 4. Finally run following command in saltmaster node.
 
 ```
-
 [root@saltmaster ~]# salt \* state.apply
-
 ```
 ## Images:
 ![nagios](/images/nagios.png)
