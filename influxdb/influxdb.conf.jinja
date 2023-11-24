@@ -458,38 +458,38 @@
 
 [[collectd]]
   enabled = true
-  bind-address = ":8086"
+  bind-address = ":25826"
   database = "collectd"
-  # retention-policy = ""
+  retention-policy = ""
   #
   # The collectd service supports either scanning a directory for multiple types
   # db files, or specifying a single db file.
   typesdb = "/usr/share/collectd/types.db"
   #
-  # security-level = "none"
-  # auth-file = "/etc/collectd/auth_file"
+  security-level = "none"
+  auth-file = "/etc/collectd/auth_file"
 
   # These next lines control how batching works. You should have this enabled
   # otherwise you could get dropped metrics or poor performance. Batching
   # will buffer points in memory if you have many coming in.
 
   # Flush if this many points get buffered
-  # batch-size = 5000
+  batch-size = 5000
 
   # Number of batches that may be pending in memory
-  # batch-pending = 10
+  batch-pending = 10
 
   # Flush at least this often even if we haven't hit buffer limit
-  # batch-timeout = "10s"
+  batch-timeout = "10s"
 
   # UDP Read buffer size, 0 means OS default. UDP listener will fail if set above OS max.
-  # read-buffer = 0
+  read-buffer = 0
 
   # Multi-value plugins can be handled two ways.
   # "split" will parse and store the multi-value plugin data into separate measurements
   # "join" will parse and store the multi-value plugin as a single multi-value measurement.
   # "split" is the default behavior for backward compatibility with previous versions of influxdb.
-  # parse-multivalue-plugin = "split"
+  parse-multivalue-plugin = "split"
 ###
 ### [opentsdb]
 ###
