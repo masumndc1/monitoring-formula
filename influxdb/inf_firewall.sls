@@ -4,3 +4,4 @@ influxdb_firewall:
     - default: False
     - ports:
         - 8086/tcp
+        - 25826/udp
