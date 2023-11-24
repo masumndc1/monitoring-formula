@@ -1,5 +1,5 @@
 /etc/collectd.conf:
   file.managed:
-    - source: salt://monitoring/collectd/collectd.conf.jijna
+    - source: salt://monitoring/collectd/collectd.conf.jinja
     - require:
       - pkg: collect_d
