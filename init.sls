@@ -3,3 +3,4 @@ include:
   - .nagios
   - .grafana-server
   - .influxdb
+  - .collectd
