@@ -2,6 +2,7 @@ collectd:
   service.running:
     - enable: true
 
-firewalld:
+col_firewalld:
   service.running:
+    - name: firewalld
     - enable: true
