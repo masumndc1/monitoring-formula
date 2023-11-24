@@ -6,4 +6,4 @@
   file.managed:
     - source: salt://monitoring/influxdb/influxdb.conf.jinja
     - require:
-      - pkg: influxdb
+      - pkg: influx_db
