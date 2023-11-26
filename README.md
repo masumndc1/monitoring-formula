@@ -94,7 +94,10 @@ simple password for nagiosadmin user. This should be strong as possible.
 nagios: http:monitoring_IP/nagios
 grafana: http:monitoring_IP:3000
 ```
-6. For grafana dash board download templats from
+6. In grafana dashboard, add influxdb as data source.
+http://10.91.203.114:8086 as http url and collectd as database.
+
+7. For grafana dash board download templats from
 https://grafana.com/grafana/dashboards/. In this example, I have used
 https://grafana.com/grafana/dashboards/554-system-overview/
 
