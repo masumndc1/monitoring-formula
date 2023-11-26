@@ -1,4 +1,4 @@
-# salt formula to setup nagios and grafana in a cluster
+# Salt formula to setup nagios and grafana in a cluster
 
 ## Example infra:
 ```
