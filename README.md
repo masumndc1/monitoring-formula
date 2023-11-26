@@ -1,5 +1,26 @@
 # salt formula to setup nagios and grafana in a cluster
 
+## Example infra:
+```
+user@localhost:~> sudo lxc list
++--------------+---------+----------------------+------+-----------+-----------+
+|     NAME     |  STATE  |         IPV4         | IPV6 |   TYPE    | SNAPSHOTS |
++--------------+---------+----------------------+------+-----------+-----------+
+| monitoring   | RUNNING | 10.91.203.114 (eth0) |      | CONTAINER | 0         |
++--------------+---------+----------------------+------+-----------+-----------+
+| saltmaster   | RUNNING | 10.91.203.98 (eth0)  |      | CONTAINER | 0         |
++--------------+---------+----------------------+------+-----------+-----------+
+| sys-dev1     | RUNNING | 10.91.203.23 (eth0)  |      | CONTAINER | 0         |
++--------------+---------+----------------------+------+-----------+-----------+
+| sys-dev2     | RUNNING | 10.91.203.184 (eth0) |      | CONTAINER | 0         |
++--------------+---------+----------------------+------+-----------+-----------+
+| sys-prod1    | RUNNING | 10.91.203.177 (eth0) |      | CONTAINER | 0         |
++--------------+---------+----------------------+------+-----------+-----------+
+| sys-prod2    | RUNNING | 10.91.203.217 (eth0) |      | CONTAINER | 0         |
++--------------+---------+----------------------+------+-----------+-----------+
+user@localhost:~>
+```
+
 ## Usages:
 1. You can fork this repo to your github account.
 Add this formula in master config file. example can be:
@@ -73,10 +94,14 @@ simple password for nagiosadmin user. This should be strong as possible.
 nagios: http:monitoring_IP/nagios
 grafana: http:monitoring_IP:3000
 ```
+6. For grafana dash board download templats from
+https://grafana.com/grafana/dashboards/. In this example, I have used
+https://grafana.com/grafana/dashboards/554-system-overview/
 
 ## Images:
 ![nagios](/images/nagios.png)
 ![grafana_dashboard](/images/grafana_dashboard.png)
+![working grafana dashboard](/images/working_dashboard.png)
 
 
 ## Troubleshooting:
