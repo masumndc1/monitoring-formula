@@ -121,8 +121,8 @@ LoadPlugin cpu
 #LoadPlugin curl_xml
 ##LoadPlugin dbi
 ##LoadPlugin dcpmm
-#LoadPlugin df
-LoadPlugin disk
+LoadPlugin df
+#LoadPlugin disk
 #LoadPlugin dns
 ##LoadPlugin dpdkevents
 ##LoadPlugin dpdkstat
@@ -666,8 +666,9 @@ LoadPlugin network
 #    EnableDispatchAll false
 #</Plugin>
 
-#<Plugin df>
-#	Device "/dev/hda1"
+<Plugin df>
+    Device "/dev/nvme0n1p2"
+    MountPoint "/"
 #	Device "192.168.0.2:/mnt/nfs"
 #	MountPoint "/home"
 #	FSType "ext3"
@@ -677,14 +678,14 @@ LoadPlugin network
 #	ReportInodes false
 #	ValuesAbsolute true
 #	ValuesPercentage false
-#</Plugin>
-
-<Plugin disk>
-  Disk "/^[hs]d[a-f][0-9]?$/"
-  IgnoreSelected false
-  UseBSDName false
-  UdevNameAttr "DEVNAME"
 </Plugin>
+
+#<Plugin disk>
+#  Disk "/^[hs]d[a-f][0-9]?$/"
+#  IgnoreSelected false
+#  UseBSDName false
+#  UdevNameAttr "DEVNAME"
+#</Plugin>
 
 #<Plugin dns>
 #	Interface "eth0"
